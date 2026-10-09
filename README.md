@@ -29,19 +29,10 @@ install.packages(c("shiny", "bslib", "bsicons", "leaflet", "plotly", "DT",
 1. The app loads `data/aurn_monthly.rds` straight away, so it opens fast.
 2. If that copy hasn't been checked with Defra in the last 12 hours (`REFRESH_EVERY_HOURS` in `R/config.R`), the app re-downloads **only the current and previous year** (the only years Defra still changes) and merges them in.
 3. Anyone can press **Check for new data** in the sidebar.
-4. If Defra can't be reached, the app keeps showing the saved copy and says so.
+4. If UK-AIR Defra data can't be reached, the app keeps showing the saved copy and says so.
 
 If you add a pollutant to `POLLUTANTS` in `R/config.R`, the next refresh downloads every year from 2015 once.
 
-## Before you deploy
-
-The included data file was built from the old PM CSV, so it has no NO2. Run this once from the project folder to download everything (about a minute):
-
-```r
-source("preprocessing/update_data.R")
-```
-
-Then redeploy `aurn_data/` to shinyapps.io as usual.
 
 ## Things you can change in `R/config.R`
 
