@@ -25,15 +25,15 @@ BENCHMARK_CHOICES <- c(
 )
 
 FIRST_YEAR            <- 2015   # earliest year to download
-REFRESH_EVERY_HOURS   <- 12     # how old the cache can get before the app checks Defra again
+REFRESH_EVERY_HOURS   <- 24     # how old the cache can get before the app checks Defra again
 MIN_CAPTURE           <- 0.75   # a month needs this much data capture to count (when filter is on)
-MIN_MONTHS_FOR_MEAN   <- 9      # months needed in a 12-month window for a "valid" mean
+MIN_MONTHS_FOR_MEAN   <- 9      # months needed in a 12-month window for a "valid" annual mean
 MAX_SITES             <- 6      # sites that can be plotted together
 DEFAULT_SITES         <- c("MY1", "KC1")  # London Marylebone Road, London N. Kensington
 
 CACHE_PATH <- file.path("data", "aurn_monthly.rds")
 
-# Line colours, assigned to sites in this fixed order (colour-blind checked).
+# Line colours, assigned to sites in this fixed order 
 SERIES_COLOURS <- c("#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300")
 
 # Map status colours.
